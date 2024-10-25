@@ -1,0 +1,8 @@
+[project]
+name = "Expense tracker full www project"
+description = "Application with registraction system to manage expense"
+version = "0.0.2"
+dependencies = [
+    "pysqllite3 >= 0.5.3.",
+    "Flask >= 3.0.3"
+]
