@@ -7,7 +7,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="/static/main.css" rel="stylesheet">
-    <title>Expense tracker add expenses page</title>
+    <title>Expense tracker registration page</title>
 </head>
 <body>
 <header>
@@ -17,23 +17,7 @@
     <img src="/static/logo_wb_big.png" width="30" height="30" class="d-inline-block align-top" alt="">
     Tracker
   </a>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/expenses/">Expenses</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/add/">Add <</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/logout/">Logout</a>
-      </li>
-    </ul>
-  </div>
-    {% else %}
+
      <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
@@ -48,10 +32,10 @@
 
     </ul>
   </div>
-    {% endif %}
+
 </nav>
 </header>
-{% if login == False %}
+
     <main>
         <div class="container">
             <div class="row mt-4">
@@ -101,37 +85,6 @@
  </div>
             </div>
     </main>
-{% else %}
-<main>
-    <div class="container">
-        <div class="row mt-4">
-            <div class="col-12">
-                <h1 class="text-center">Expense tracker</h1>
-                <p class="text-center">You are logged in</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 m-3">
-                  <div class="col-12 d-flex justify-content-center">
-                        <a type="button" class="btn btn-outline-dark btn-lg m-1" href="/expenses/" role="button">Expenses list</a>
-                        <a type="button" class="btn btn-outline-dark btn-lg m-1" href="/add/" role="button">Add expense</a>
-                    </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 p-4 d-flex justify-content-center pt-5 pl-5 pr-5">
-            <h3 class="display-5"><i>Control your expenses better than your competition. This is where you can always find the competitive advantage.
-            </i></h3></div>
-            <div class="col-12 p-4 d-flex justify-content-right">
-            <p>Sam Walton</p>
-
-        </div>
-    </div>
-
-    </div>
-
-</main>
-{% endif %}
 
  <footer class="bg-dark">
             <!-- Grid container -->

@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %} Register page for expensive tracker {% endblock %}
+
+
+{% block main %}
+<main>
+    <div class="container main_content">
+        <div class="row mt-4">
+            <div class="col-12">
+                <h1 class="text-center">Expense tracker</h1>
+                <p class="text-center lead">You can add and control your expensive</p>
+            </div>
+        </div>
+
+        <form method="POST" action="/expenses/">
+            <div class="row d-flex justify-content-center">
+
+                <div class="col-6">
+                    <label for="description" class="form-label">Description</label>
+                    <input type="text" class="form-control" id="description" name="description"
+                           placeholder="e.g. Biedronka">
+                </div>
+                <div class="col-2">
+                    <label for="cost" class="form-label">Cost(PLN)</label>
+                    <input type="number" class="form-control" id="cost" name="cost" placeholder="e.g 34.00" step="0.01">
+                </div>
+                <div class="col-2 align-self-end">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <table class="table">
+
+                        <thead>
+                        <tr>
+                            <th scope="col">Description</th>
+                            <th scope="col">Cost</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for expense in expenses_list %}
+                        <tr>
+                            {% for iteam in expense %}
+                            <td>{{iteam}}</td>
+                            {% endfor %}
+
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+
+
+    <div class="mt-3">
+
+
+    </div>
+    </div>
+</main>
+
+{% endblock %}
