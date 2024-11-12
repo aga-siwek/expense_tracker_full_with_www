@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %} Login page for expensive tracker {% endblock %}
+{% block main %}
+ <main>
+        <div class="container main_content">
+            <div class="row mt-4">
+                <div class="col-12">
+                    <h1 class="text-center">Expense tracker</h1>
+                    <p class="text-center lead">Log in and take control of the money for your dream.</p>
+
+
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-8 p-3">
+                    <form method="post" action="/login">
+                      <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                      </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password">
+                        </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                </div>
+            </div>
+
+    <div class="mt-3">
+
+    <div class="row">
+        <div class="col-12 p-4 d-flex justify-content-center pt-5 pl-5 pr-5">
+            <h3 class="display-5"><i>Control your expenses better than your competition. This is where you can always find the competitive advantage.
+</i></h3></div>
+        <div class="col-12 p-4 d-flex justify-content-right">
+            <p>Sam Walton</p>
+
+        </div>
+    </div>
+ </div>
+            </div>
+    </main>
+
+{% endblock %}

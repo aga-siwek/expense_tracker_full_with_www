@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %} Register page for expensive tracker {% endblock %}
+
+
+{% block main %}
+<main>
+    <div class="container main_content">
+        <div class="row mt-4">
+            <div class="col-12">
+                <h1 class="text-center">Expense tracker</h1>
+                <p class="text-center lead">Register to expense tracker, and take control on your financial life</p>
+
+
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-8 p-3">
+                <form method="POST" action="/register">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="first_name" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="first_name" name="first_name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="last_name" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="last_name" name="last_name">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-3">
+
+
+        </div>
+    </div>
+</main>
+{% endblock %}
